@@ -16,14 +16,14 @@ def two_args():
     msg_id_from = splits_from[6]
     msg_id_to = splits_to[6]
 
-    os.system(f"discord-chat-exporter-cli export -t '{TOKEN}' -c '{channel_id}' --after {msg_id_from} --before {msg_id_to} --media --reuse-media -o .")
+    os.system(f"discord-chat-exporter-cli export -t '{TOKEN}' -c '{channel_id}' --after {msg_id_from} --before {msg_id_to} --media --reuse-media -o . --media-dir .assets")
 
 def three_args():
     channel_id = sys.argv[1]
     msg_id_from = sys.argv[2]
     msg_id_to = sys.argv[3]
 
-    os.system(f"discord-chat-exporter-cli export -t '{TOKEN}' -c '{channel_id}' --after {msg_id_from} --before {msg_id_to} --media --reuse-media -o .")
+    os.system(f"discord-chat-exporter-cli export -t '{TOKEN}' -c '{channel_id}' --after {msg_id_from} --before {msg_id_to} --media --reuse-media -o . --media-dir .assets")
 
 if (len(sys.argv) == 3):
     two_args()
