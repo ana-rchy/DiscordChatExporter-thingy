@@ -1,7 +1,8 @@
 import sys
 import os
 
-with open("token.txt", "r") as f:
+dir_path = os.path.dirname(os.path.realpath(__file__))
+with open(f"{dir_path}/token.txt", "r") as f:
     TOKEN = f.read()
 
 def two_args():
